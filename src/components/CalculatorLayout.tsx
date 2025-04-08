@@ -25,7 +25,6 @@ const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
   return (
     <>
       <Head>
-        <title>{title} | Lcalculator</title>
         <meta name="description" content={metaDescription || description} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         <meta property="og:title" content={`${title} | Lcalculator`} />

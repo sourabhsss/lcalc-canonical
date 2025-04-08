@@ -22,7 +22,6 @@ export default function CalculatorClient() {
 
   return (
     <PageLayout>
-      <h1 className="text-2xl font-bold mb-4">{calculatorName} Calculator</h1>
       <Component />
     </PageLayout>
   )
