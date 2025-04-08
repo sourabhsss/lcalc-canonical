@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 161 76% 44%; /* New primary color HSL values */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 291 100% 77%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 291 100% 77%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 161 76% 44%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 161 76% 44%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 161 76% 44%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 161 76% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 291 100% 77%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 291 100% 77%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 161 76% 44%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 161 76% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 161 76% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  .calc-card {
+    @apply border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden;
+  }
+  
+  .calc-card-header {
+    @apply bg-accent/10 p-4 border-b;
+  }
+  
+  .calc-card-body {
+    @apply p-6;
+  }
+  
+  .input-field {
+    @apply block w-full rounded-md border border-input bg-background px-3 py-2 text-sm 
+    ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none 
+    focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm 
+    font-medium text-primary-foreground ring-offset-background transition-colors 
+    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 
+    focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none 
+    disabled:opacity-50;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold text-foreground mb-6;
+  }
+
+  .content-section {
+    @apply py-12 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  /* Gumroad-style button */
+  .gumroad-button {
+    @apply bg-primary text-white font-medium px-4 py-2 rounded-md hover:bg-primary/90 transition-colors border-black border;
+  }
+
+  /* Gumroad-style card */
+  .gumroad-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all;
+  }
+
+  /* Gumroad-style section */
+  .gumroad-section {
+    @apply py-16 px-4;
+  }
+
+  /* Gumroad-style heading */
+  .gumroad-heading {
+    @apply text-4xl font-bold mb-6;
+  }
+}
+
+/* Add proper prose styling */
+.prose {
+  @apply max-w-none text-foreground;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-foreground font-bold mb-4 mt-6;
+}
+
+.prose h1 {
+  @apply text-3xl;
+}
+
+.prose h2 {
+  @apply text-2xl;
+}
+
+.prose h3 {
+  @apply text-xl;
+}
+
+.prose p {
+  @apply mb-4 text-muted-foreground;
+}
+
+.prose ul, .prose ol {
+  @apply mb-4 pl-6;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2 text-muted-foreground;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary/30 pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-muted px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-muted p-4 rounded-md overflow-x-auto my-4;
+}
+
+.prose img {
+  @apply rounded-md my-4;
+}
+
+.prose strong {
+  @apply font-semibold;
+}
+
+.prose table {
+  @apply w-full border-collapse my-4;
+}
+
+.prose table th, .prose table td {
+  @apply border border-border p-2;
+}
+
+.prose table th {
+  @apply bg-muted;
+}
