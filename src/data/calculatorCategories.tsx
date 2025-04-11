@@ -8,7 +8,6 @@ import { financeCalculators } from './categories/financeCalculators';
 import { constructionCalculators } from './categories/constructionCalculators';
 import { sportsCalculators } from './categories/sportsCalculators';
 import { spiritualCalculators } from './categories/spiritualCalculators';
-import { weatherCalculators } from './categories/weatherCalculators';
 
 // Calculator categories
 export const calculatorCategories: CalculatorCategory[] = [
@@ -23,10 +22,6 @@ export const calculatorCategories: CalculatorCategory[] = [
   {
     name: 'Date & Time',
     calculators: dateTimeCalculators
-  },
-  {
-    name: 'Weather',
-    calculators: weatherCalculators
   },
   {
     name: 'Spiritual & Metaphysical',
