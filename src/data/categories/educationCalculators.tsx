@@ -1,9 +1,15 @@
 import React from 'react';
 import { CalculatorItem } from '../calculatorTypes';
-import { GraduationCap, BookOpen, Calculator, Pencil, FileEdit, BarChart4, PenTool, FlaskConical } from 'lucide-react';
+import { GraduationCap, BookOpen, Calculator, Pencil, FileEdit, BarChart4, PenTool, FlaskConical, BookMarked } from 'lucide-react';
 
 // Education Calculators
 export const educationCalculators: CalculatorItem[] = [
+  {
+    title: 'AP Lang Score Calculator',
+    description: 'Estimate your AP English Language and Composition score based on multiple-choice and free-response performance.',
+    icon: <BookMarked size={24} />,
+    to: '/ap-lang-calculator'
+  },
   {
     title: 'College GPA Calculator',
     description: 'Calculate your college Grade Point Average (GPA) for a single semester or your cumulative GPA across multiple terms.',

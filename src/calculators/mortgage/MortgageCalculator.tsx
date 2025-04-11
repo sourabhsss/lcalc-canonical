@@ -99,35 +99,42 @@ const MortgageCalculator: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1">
-          <Card className="mb-6 overflow-hidden">
+      <div className="space-y-8">
+        {/* Calculator Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <Card className="lg:col-span-1">
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-4">Calculate Your Mortgage</h2>
               <MortgageForm onCalculate={calculateMortgage} />
             </div>
           </Card>
           
-          {results && (
-            <Card className="overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-4">Your Results</h2>
-                <MortgageResult result={results} />
+          <div className="lg:col-span-1">
+            {results ? (
+              <Card>
+                <div className="p-6">
+                  <h2 className="text-xl font-semibold mb-4">Your Results</h2>
+                  <MortgageResult result={results} />
+                </div>
+              </Card>
+            ) : (
+              <div className="h-full flex items-center justify-center p-6 border rounded-lg bg-muted/5">
+                <p className="text-center text-muted-foreground">
+                  Enter your mortgage details to see payment calculations and amortization schedule.
+                </p>
               </div>
-            </Card>
-          )}
-        </div>
-        
-        <div className="lg:col-span-2">
-          <MortgageContent />
-          
-          <div className="mt-12">
-            <FAQSection 
-              title="Frequently Asked Questions About Mortgages" 
-              faqs={mortgageFAQs} 
-            />
+            )}
           </div>
         </div>
+
+        {/* Content Section */}
+        <MortgageContent />
+        
+        {/* FAQ Section */}
+        <FAQSection 
+          title="Frequently Asked Questions About Mortgages" 
+          faqs={mortgageFAQs} 
+        />
       </div>
     </div>
   );

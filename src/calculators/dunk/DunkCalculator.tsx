@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Container } from '@/components/ui/container';
 import DunkForm, { DunkFormData } from './DunkForm';
@@ -21,12 +20,12 @@ const DunkCalculator: React.FC = () => {
 
   return (
     <Container className="py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="lg:col-span-1">
           <DunkForm onCalculate={handleCalculate} />
         </div>
         
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-1">
           {result ? (
             <div id="dunk-results">
               <DunkResult formData={result} />

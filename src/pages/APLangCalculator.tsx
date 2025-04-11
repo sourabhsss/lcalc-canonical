@@ -1,8 +1,8 @@
 import React from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
-import APLang from '@/calculators/APLang';
+import APLangCalculator from '@/calculators/apLang/APLangCalculator';
 
-const APLangCalculator: React.FC = () => {
+const APLangPage: React.FC = () => {
   return (
     <CalculatorLayout
       title="AP Lang Score Calculator"
@@ -11,10 +11,10 @@ const APLangCalculator: React.FC = () => {
       metaDescription="Use our free AP Lang Score Calculator to estimate your score on the AP English Language and Composition exam. Convert multiple-choice and essay scores to the 1-5 scale."
     >
       <div className="py-12">
-        <APLang />
+        <APLangCalculator />
       </div>
     </CalculatorLayout>
   );
 };
 
-export default APLangCalculator;
+export default APLangPage;

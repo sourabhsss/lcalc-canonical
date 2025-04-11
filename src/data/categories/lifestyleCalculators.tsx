@@ -4,22 +4,10 @@ import { BookAudio, Heart, GraduationCap, FlaskConical, LampDesk, Clock, Utensil
 
 export const lifestyleCalculators: CalculatorItem[] = [
   {
-    title: "Love Calculator",
-    description: "Calculate love compatibility between two people.",
-    icon: <Heart className="h-6 w-6" />,
-    to: "/love-calculator"
-  },
-  {
     title: "Flames Calculator",
     description: "Find your relationship status using the FLAMES game.",
     icon: <Heart className="h-6 w-6" />,
     to: "/flames-calculator"
-  },
-  {
-    title: "Twin Flame Calculator",
-    description: "Discover your Twin Flame connection.",
-    icon: <Heart className="h-6 w-6" />,
-    to: "/twin-flame-calculator"
   },
   {
     title: "Lap Day Calculator",
@@ -52,12 +40,6 @@ export const lifestyleCalculators: CalculatorItem[] = [
     to: "/air-fryer-calculator"
   },
   {
-    title: "Angel Number Calculator",
-    description: "Discover the meaning behind recurring numbers.",
-    icon: <LampDesk className="h-6 w-6" />,
-    to: "/angel-number-calculator"
-  },
-  {
     title: "Audiobook Speed Calculator",
     description: "Calculate time saved at different audiobook playback speeds.",
     icon: <BookAudio className="h-6 w-6" />,
@@ -68,5 +50,5 @@ export const lifestyleCalculators: CalculatorItem[] = [
     description: "Calculate productivity metrics for therapists, including billable hours, efficiency rates, and revenue projections.",
     icon: <FileBarChart className="h-6 w-6" />,
     to: "/therapy-productivity-calculator"
-  },
+  }
 ];
