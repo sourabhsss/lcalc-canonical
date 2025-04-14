@@ -25,6 +25,7 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','G-VQV7BL0DVQ');
         `}</Script>
+<script defer data-domain="lcalculator.com" src="https://plausible.io/js/script.js"></script>
         <Script 
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8630405999832993"
