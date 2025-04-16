@@ -3,3 +3,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lcalculator.com/sitemap.xml
+Sitemap: https://lcalculator.com/manual_sitemap.xml
